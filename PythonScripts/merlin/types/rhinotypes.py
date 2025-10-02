@@ -1,6 +1,6 @@
 """
 rhinotypes.py
-Rhino type imports and aliases for IronPython/CLR applications
+Rhino type imports and aliases for AWI.RhinoInside remote python scripts
 """
 
 import clr

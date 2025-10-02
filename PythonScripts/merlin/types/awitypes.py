@@ -1,6 +1,6 @@
 """
 awitypes.py
-AWI RhinoInside type imports and aliases for IronPython/CLR applications
+AWI RhinoInside type imports and aliases 
 """
 
 import clr

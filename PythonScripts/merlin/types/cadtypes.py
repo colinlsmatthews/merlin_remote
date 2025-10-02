@@ -1,9 +1,12 @@
 """
 cadtypes.py
-AutoCAD type imports and aliases for IronPython/CLR applications
+AutoCAD type imports for AWI.RhinoInside remote python scripts
 """
 
 import clr
+import sys
+import os
+sys.path.append(r"C:\Programs\Autodesk\AutoCAD 2024")
 
 # Add references to AutoCAD assemblies
 clr.AddReference("acdbmgd")
@@ -11,12 +14,14 @@ clr.AddReference("acmgd")
 clr.AddReference("accoremgd")
 
 # Import AutoCAD namespaces
+import Autodesk
 from Autodesk.AutoCAD.DatabaseServices import *
 from Autodesk.AutoCAD.Geometry import *
 from Autodesk.AutoCAD.GraphicsInterface import *
 from Autodesk.AutoCAD.ApplicationServices import Document
 from Autodesk.AutoCAD.ApplicationServices.Core import Application
 from Autodesk.AutoCAD.EditorInput import Editor
+from Autodesk.AutoCAD.Runtime.SystemObjects.DynamicLinker import LoadModule
 
 # Type aliases matching C# using statements
 # ApplicationServices
@@ -73,6 +78,7 @@ AcadVector3d = Vector3d
 # Define what gets exported with 'from cadtypes import *'
 __all__ = [
     # Aliases
+    'Autodesk',
     'AcadApplication',
     'AcadArc',
     'AcadCircle',
