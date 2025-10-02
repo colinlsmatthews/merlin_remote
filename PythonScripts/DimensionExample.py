@@ -2,7 +2,7 @@ import clr
 import sys
 import os
 import math
-sys.path.append(r"\\gilns010\Merlin\PythonScripts")
+sys.path.append(r"\\gilns010\Merlin\merlin_remote\PythonScripts")
 from merlin import VERSION
 
 from System.Reflection import Assembly
